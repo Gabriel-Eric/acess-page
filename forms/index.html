@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <h1>Forms</h1>
+    <p>Usuário</p>
+    <input type="text" id="user" oninput="validateUser()" class="entrada"></input>
+    <p>E-mail</p>
+    <input type="text" id="email" oninput="validateEmail()" class="entrada"></input>
+    <p>Senha</p>
+    <input type="password" id="pass" oninput="validatePass()" class="entrada"></input>
+    <p>Repita a senha</p>
+    <input type="password" id="passTwo" oninput="confirmPass()" class="entrada"></input><br><br>
+    <button type="button" onclick="submit()">Criar conta</button>
+
+</body>
+</html>
