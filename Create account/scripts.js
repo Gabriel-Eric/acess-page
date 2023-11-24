@@ -41,6 +41,7 @@ function confirmPass(){
         console.log('FODEO')
     } else{
         console.log('NICE')
+        
     }
 }
 const person =[]
