@@ -4,11 +4,10 @@ function setError(){
 function removeError(){
 
 }
-
 function validateUser(){
     let user = document.getElementById('user').value;
     if(user.length < 3){
-        console.log('FODEO')
+        console.log('FODEO');
         //setError()
     }else{
         console.log('Tudo certo');
@@ -20,18 +19,25 @@ function validateEmail(){
     let email          =    document.getElementById('email').value;
     let validacaoEmail =    emailRegex.test(email);
     if(validacaoEmail  ==   false){
+        console.log('FODEO');
         //setError()
     }else{
+        console.log('Tudo certo');
         //removeError()
+        return true
     }
     
 }
 function validatePass(){
     let pass = document.getElementById('pass').value;
     if(pass.length < 8){
+        console.log('FODEO');
         //setError()
     }else{
+        console.log('Tudo certo')
         //removeError()
+        return true
+
     }
 }
 function confirmPass(){
@@ -39,17 +45,22 @@ function confirmPass(){
     let passTwo = document.getElementById('passTwo').value;
     if(pass != passTwo){
         console.log('FODEO')
+        //setError()
     } else{
         console.log('NICE')
-        
+        //removeError()
+        return true  
     }
 }
-const person =[]
-function submit(){
+const accs =[]
+function submit(){ 
     console.log('Registro cocluído com sucesso')
     const user   = document.getElementById('user').value;
     const email  = document.getElementById('email').value;
     const pass   = document.getElementById('pass').value;
     const person = {Usuário: user,Email:email,Senha:pass};
-    console.log(person);
+    accs.push(person);
+    for(let l = 0; l < accs.length; l++){
+        console.log(accs[l])
+    }
 }
