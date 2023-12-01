@@ -9,9 +9,11 @@ function validateUser(){
     if(user.length < 3){
         console.log('FODEO');
         //setError()
+        return false
     }else{
         console.log('Tudo certo');
         //removeError()
+        return true
     }
 }
 function validateEmail(){
@@ -21,6 +23,7 @@ function validateEmail(){
     if(validacaoEmail  ==   false){
         console.log('FODEO');
         //setError()
+        return false
     }else{
         console.log('Tudo certo');
         //removeError()
@@ -33,6 +36,7 @@ function validatePass(){
     if(pass.length < 8){
         console.log('FODEO');
         //setError()
+        return false
     }else{
         console.log('Tudo certo')
         //removeError()
@@ -46,6 +50,7 @@ function confirmPass(){
     if(pass != passTwo){
         console.log('FODEO')
         //setError()
+        return false
     } else{
         console.log('NICE')
         //removeError()
@@ -54,6 +59,7 @@ function confirmPass(){
 }
 const accs =[]
 function submit(){ 
+    if(validateUser() == true && validateEmail() == true && validatePass() == true && confirmPass() == true){
     console.log('Registro cocluído com sucesso')
     const user   = document.getElementById('user').value;
     const email  = document.getElementById('email').value;
@@ -61,6 +67,9 @@ function submit(){
     const person = {Usuário: user,Email:email,Senha:pass};
     accs.push(person);
     for(let l = 0; l < accs.length; l++){
-        console.log(accs[l])
+        console.log(accs[l])}
     }
 }
+
+
+
