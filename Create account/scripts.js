@@ -59,7 +59,6 @@ function confirmPass(){
         return true  
     }
 }
-var teste = 10
 const accs =[]
 function submit(){
     if(validateUser() == true && validateEmail() == true && validatePass() == true && confirmPass() == true){
@@ -70,7 +69,7 @@ function submit(){
     const person = {Usuário: user,Email:email,Senha:pass};
     accs.push(person);
     for(let l = 0; l < accs.length; l++){
-        console.log(accs[l])
+        console.log(accs[l]);
         localStorage.setItem("Accounts",JSON.stringify(accs));
     }
         
@@ -81,32 +80,29 @@ function submit(){
 //PÁGINA DE LOGIN 
 
 function checkLogin(){
-    //localStorage.clear()
-    const accounts = JSON.parse(localStorage.getItem("Accounts"))
-    //console.log(accounts)
+    const accounts = JSON.parse(localStorage.getItem("Accounts"));
     let vUser = document.getElementById('vuser').value;
     let vPass = document.getElementById('vpass').value;
     for(let i = 0; i < accounts.length; i++){
         if(accounts[i].Usuário == vUser){
             var index = i;
-            console.log(i)
-            console.log('Achou')
-            var checkUser = true
+            console.log('Usuário encontrado');
+            var checkUser = true;
             break;
         }else{
-            console.log('Usuário não encontrado')
+            console.log('Usuário não encontrado');
         }
     }
     if(vPass == accounts[index].Senha){
-        console.log('Senha correta')
+        console.log('Senha correta');
         var checkPass = true;
     }else{
-        console.log('Senha errada')
+        console.log('Senha errada');
     }
     if(checkUser == true && checkPass == true){
-        console.log("Login efetuado com sucesso")
+        console.log("Login efetuado com sucesso");
     }else{
-        console.log('Crie uma conta')
+        console.log('Crie uma conta');
     }
 
     }
