@@ -69,7 +69,6 @@ function submit(){
     const person = {Usuário: user,Email:email,Senha:pass};
     accs.push(person);
     for(let l = 0; l < accs.length; l++){
-        console.log(accs[l]);
         localStorage.setItem("Accounts",JSON.stringify(accs));
     }
         
