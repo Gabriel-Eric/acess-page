@@ -9,11 +9,11 @@ function removeError(){
 function validateUser(){
     let user = document.getElementById('user').value;
     if(user.length < 3){
-        console.log('ERRO');
+        console.log('ERRO. Certifique-se de que o nome de usuário tenha ao menos 3 dígitos');
         //setError()
         return false
     }else{
-        console.log('NICE');
+        console.log('Nome de usuário validado com sucesso!');
         //removeError()
         return true
     }
@@ -23,11 +23,11 @@ function validateEmail(){
     let email          =    document.getElementById('email').value;
     let validacaoEmail =    emailRegex.test(email);
     if(validacaoEmail  ==   false){
-        console.log('ERRO');
+        console.log('ERRO. Verfique a formatação do email');
         //setError()
         return false
     }else{
-        console.log('NICE');
+        console.log('Email do usuário validado com sucesso!');
         //removeError()
         return true
     }
@@ -36,11 +36,11 @@ function validateEmail(){
 function validatePass(){
     let pass = document.getElementById('pass').value;
     if(pass.length < 8){
-        console.log('ERRO');
+        console.log('ERRO. Certifique-se de que a senha possua ao menos 8 dígitos.');
         //setError()
         return false
     }else{
-        console.log('NICE')
+        console.log('Senha formatada com sucesso!');
         //removeError()
         return true
 
@@ -50,11 +50,11 @@ function confirmPass(){
     let pass = document.getElementById('pass').value;
     let passTwo = document.getElementById('passTwo').value;
     if(pass != passTwo){
-        console.log('ERRO')
+        console.log('ERRO. Certifque-se que ambas senhas estejam iguais.');
         //setError()
         return false
     } else{
-        console.log('NICE')
+        console.log('Senha do usuário validada com sucesso');
         //removeError()
         return true  
     }
