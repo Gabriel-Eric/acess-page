@@ -19,10 +19,10 @@ function validateUser(){
     }
 }
 function validateEmail(){
-    let emailRegex     =    /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
-    let email          =    document.getElementById('email').value;
-    let validacaoEmail =    emailRegex.test(email);
-    if(validacaoEmail  ==   false){
+    let emailRegex     = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+    let email          = document.getElementById('email').value;
+    let validacaoEmail = emailRegex.test(email);
+    if(validacaoEmail  == false){
         console.log('ERRO. Verfique a formatação do email');
         //setError()
         return false
@@ -62,6 +62,7 @@ function confirmPass(){
 const accs =[]
 function submit(){
     if(validateUser() == true && validateEmail() == true && validatePass() == true && confirmPass() == true){
+        console.clear()
     console.log('Registro cocluído com sucesso');
     const user   = document.getElementById('user').value;
     const email  = document.getElementById('email').value;
