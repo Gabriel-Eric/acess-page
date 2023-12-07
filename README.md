@@ -1,4 +1,5 @@
 # Acess-page
+ Olá, seja bem vindo ao meu primeiro projeto no Github.<br>
  Projeto desenvolvido com uma amigo, consiste em uma página simples de login e criação de contas.<br>
  O principal do projeto está na parte não aparente do site mas sim no seu funcionamento, é possível ver a finalidade do projeto pelo <em>console<em> (futuramente será possível ver esse funcionamento na parte visível) que consiste em:
  <br>CRIAÇÃO DE CONTA<br>
